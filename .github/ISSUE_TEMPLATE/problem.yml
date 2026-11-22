@@ -1,0 +1,62 @@
+name: A problem
+description: Something in Wallpaper Rail does not work, or does not work as you expected.
+title: "Problem: "
+labels: ["problem"]
+body:
+  - type: checkboxes
+    id: searched
+    attributes:
+      label: Before you start
+      options:
+        - label: I searched the open issues and this is not already reported.
+          required: true
+  - type: textarea
+    id: did
+    attributes:
+      label: What you did
+      description: The steps that lead to the problem, as exactly as you can.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened instead
+      description: Screenshots can be dragged in here.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Wallpaper Rail version
+      description: In the app's About window.
+      placeholder: "0.1.1"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and Mac
+      placeholder: "macOS 26.1, MacBook Air M3"
+    validations:
+      required: true
+  - type: input
+    id: screens
+    attributes:
+      label: Screens
+      description: How many screens, and whether the wallpaper is spanned or one each.
+    validations:
+      required: false
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: The last lines of ~/Library/Logs/Wallpapers.log from around the time it happened. This is public, so remove anything private first.
+      render: text
+    validations:
+      required: false
